@@ -1,18 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".MainActivity"
+    android:background="#F87A17"
+    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Time Machine"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text1"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Time Traveler"
+        android:id="@+id/text2"
+        android:layout_below="@+id/text1"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="**Disclamer: Only works on a full charge of 1.21 giga watts. May not work on all devices**"
+        android:id="@+id/text3"
+        android:layout_below="@+id/text2"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your destination time and date."
+        android:id="@+id/text4"
+        android:layout_below="@+id/text3"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text4"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="618dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_below="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/editText2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150pt"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+</RelativeLayout>
